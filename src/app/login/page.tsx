@@ -1,6 +1,5 @@
 "use client";
 
-import Head from 'next/head';
 import { NextPage } from 'next';
 import { useState } from 'react';
 import axios from 'axios';

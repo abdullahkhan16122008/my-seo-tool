@@ -1,6 +1,5 @@
 "use client";
 
-import Head from 'next/head';
 import { NextPage } from 'next';
 import { useState } from 'react';
 import axios from 'axios';
@@ -35,7 +34,7 @@ const SignupForm = () => {
         }
 
       }, 1500); // wait for redirect to complete
-    } catch (e) {
+    } catch (e: unknown) {
       console.error(e);
     }
   };
@@ -49,7 +48,7 @@ const SignupForm = () => {
         alert(message)
       }
       console.log('Email submitted:', email);
-    }).catch((e) =>{
+    }).catch((e: unknown) =>{
       alert('Something went wrong')
       console.log(e)
     }

@@ -129,7 +129,7 @@ const DashboardLayout = () => {
         </div>
         <div className="overview bg-[#f0f4f8] p-2.5 sm:p-2 md:p-2.5 flex items-center border-b border-[#e0e7ff] ml-15 sm:ml-12 md:ml-15 w-[calc(100%-60px)] sm:w-[calc(100%-50px)] md:w-[calc(100%-60px)] flex-wrap gap-2.5">
           <div className="breadcrumbs text-[#1a0d48] text-sm sm:text-xs md:text-sm">
-            <a href="#">Home</a> > <a href="#">SEO</a> > <a href="#">Domain Overview</a>
+            <a href="#">Home</a> &gt; <a href="#">SEO</a> &gt; <a href="#">Domain Overview</a>
           </div>
           <div className="title text-[#1a0d48] text-sm sm:text-xs md:text-sm font-bold">
             Domain Overview: caryaati.com
