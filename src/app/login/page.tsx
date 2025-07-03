@@ -27,7 +27,7 @@ const LoginForm = () => {
           { withCredentials: true }
         );
 
-        const { message, auth } = response.data;
+        const { message } = response.data;
 
         if (message) {
           alert(message);
@@ -103,7 +103,7 @@ const LoginForm = () => {
           </button>
         </form>
         <div className="signup text-sm">
-          Don't have a Semrush account? <a href="#" className="text-blue-500 hover:underline">Sign up</a>
+          Don&apos;t have a Semrush account? <a href="#" className="text-blue-500 hover:underline">Sign up</a>
         </div>
         <div className="saml text-sm mt-2">Log in with SAML</div>
       </div>
@@ -116,7 +116,7 @@ const LoginForm = () => {
 };
 
 const Home: NextPage = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div className="bg-gradient-to-b from-[#3f1e6d] to-[#2a1a4e] text-white font-sans">

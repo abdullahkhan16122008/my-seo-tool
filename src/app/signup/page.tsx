@@ -27,13 +27,13 @@ const SignupForm = () => {
           { withCredentials: true }
         );
 
-        const { message, auth } = response.data;
+        const { message } = response.data;
 
         if (message) {
           alert(message);
         }
 
-      }, 1500); // wait for redirect to complete
+      }, 1500);
     } catch (e: unknown) {
       console.error(e);
     }
@@ -42,8 +42,8 @@ const SignupForm = () => {
     e.preventDefault();
 
 
-    let api = await axios.post('http://localhost:4000/api/signup', {email: email, password: password},{withCredentials: true}).then((response)=>{
-      let {message, auth} = response.data;
+    const api = await axios.post('http://localhost:4000/api/signup', {email: email, password: password},{withCredentials: true}).then((response)=>{
+      const {message, auth} = response.data;
       if(message){
         alert(message)
       }
@@ -113,7 +113,7 @@ const SignupForm = () => {
 };
 
 const Home: NextPage = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (  
     <div className="bg-gradient-to-b from-[#3f1e6d] to-[#2a1a4e] text-white font-sans">

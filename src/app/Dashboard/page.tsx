@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 
-let NotVerified = () => {
+const NotVerified = () => {
   return (
     <div className='fixed top-0 right-0 left-0 bottom-0 z-[999] font-bold bg-white text-black text-center items-center content-center'><div className='text-center text-4xl'>Access Denied, Please Login Now</div></div>
   )
@@ -21,10 +21,10 @@ const DashboardLayout = () => {
     console.log(`${action} clicked`);
   };
 
-  let verifyUser = async () => {
+  const verifyUser = async () => {
     try {
-      let response = await axios.post('http://localhost:4000/api/verify', {}, { withCredentials: true })
-      let { auth, message } = response.data;
+      const response = await axios.post('http://localhost:4000/api/verify', {}, { withCredentials: true })
+      const { auth, message } = response.data;
       if (auth === true) {
         console.log("User verified");
         setVerify(Boolean(auth));
@@ -178,7 +178,7 @@ const DashboardLayout = () => {
 };
 
 const Home: NextPage = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div className="bg-gradient-to-b from-[#3f1e6d] to-[#2a1a4e] text-white font-sans">
