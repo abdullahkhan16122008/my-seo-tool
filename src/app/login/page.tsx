@@ -22,7 +22,7 @@ const LoginForm = () => {
         if (!session?.user?.email) return;
 
         const response = await axios.post(
-          'http://localhost:4000/api/google-auth',
+          'https://my-seo-tool-backend.onrender.com/api/google-auth',
           { email: session.user.email },
           { withCredentials: true }
         );
@@ -43,7 +43,7 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:4000/api/login',
+        'https://my-seo-tool-backend.onrender.com/api/login',
         { email, password },
         { withCredentials: true }
       );
