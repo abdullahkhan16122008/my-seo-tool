@@ -1,6 +1,6 @@
 "use client";
 
-import Head from 'next/head';
+import Head from 'next/head'
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -23,7 +23,7 @@ const DashboardLayout = () => {
 
   const verifyUser = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/api/verify', {}, { withCredentials: true })
+      const response = await axios.post('/api/verify', {}, { withCredentials: true })
       const { auth, message } = response.data;
       if (auth === true) {
         console.log("User verified");
