@@ -22,7 +22,7 @@ const SignupForm = () => {
         if (!session?.user?.email) return;
 
         const response = await axios.post(
-          'http://localhost:4000/api/google-auth',
+          'https://my-seo-tool-backend.onrender.com/api/google-auth',
           { email: session.user.email },
           { withCredentials: true }
         );
@@ -42,7 +42,7 @@ const SignupForm = () => {
     e.preventDefault();
 
 
-    const api = await axios.post('http://localhost:4000/api/signup', {email: email, password: password},{withCredentials: true}).then((response)=>{
+    const api = await axios.post('https://my-seo-tool-backend.onrender.com/api/signup', {email: email, password: password},{withCredentials: true}).then((response)=>{
       const {message, auth} = response.data;
       if(message){
         alert(message)
